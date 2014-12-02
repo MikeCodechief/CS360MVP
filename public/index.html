@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="airQualityApp">
+<head>
+<title>Air Quality Checker</title>
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/css/layout.css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">
+          <img alt="Brand" src="http://images.clipartpanda.com/cloud-icon-png-CloudIcon.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/locations">Login</a></li>
+          <li><a href="#/locations">Sign-up</a></li>
+        <ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div ng-view ></div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="js/core.js"></script>
+  <script type="text/javascript" src="js/controllers/currentLocationController.js"></script>
+  <script type="text/javascript" src="js/controllers/locationsController.js"></script>
+  <script type="text/javascript" src="js/config/router.js"></script>
+</body>
+</html>

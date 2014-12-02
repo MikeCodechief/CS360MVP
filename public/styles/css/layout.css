@@ -1,0 +1,13 @@
+html, body {
+  background-color: steelblue;
+}
+
+nav.navbar img {
+  max-height: 25px;
+}
+
+.air-quality-box {
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  margin: 10px 0;
+}

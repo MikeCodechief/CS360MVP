@@ -1,0 +1,25 @@
+<section class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3" ng-controller="LocationsController">
+
+        <form class="input-group row col-xs-12" ng-submit="add()">
+          <input type="text" class="form-control" ng-model="newLocation">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="submit">Add</button>
+          </span>
+        </form>
+
+      <div class="air-quality-box col-xs-12 row" ng-repeat="location in locations">
+        <div class="row">
+          <h5 class="col-xs-4">Location:</h5>
+          <h3 class="col-xs-7">{{location.name}}</h3>
+          <button class="btn btn-danger col-xs-1 col-xs-offset-8" ng-click="remove($index)">X</button>
+        </div>
+        <div class="row">
+          <h5 class="col-xs-4">Current air quality:</h5>
+          <h3 class="col-xs-8">{{location.quality}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
