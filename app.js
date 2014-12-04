@@ -13,7 +13,7 @@ app.get('/',function(req,res){
 function isAuthenticated(req,res,next){
 	if(req.query.password !== "1234")
 	{
-		res.send("you are not autherized");
+		res.send("you are not autherized");//jjkhkjhjkh
 	}
 	else
 	{
