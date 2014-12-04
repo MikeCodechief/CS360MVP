@@ -1,6 +1,6 @@
 airQualityApp.controller("CurrentLocationController", ['$scope', '$http',
     function ($scope, $http) {
-        var airNowUrl = 'http://localhost:1234/api/airdata/zipcode/84604'
+        var airNowUrl = '/api/airdata/zipcode/84604'
         $http.get(airNowUrl)
             .success(function (data) {
                 $scope.name = data[0].ReportingArea + ", " + data[0].StateCode

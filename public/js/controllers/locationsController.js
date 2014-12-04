@@ -7,7 +7,7 @@ airQualityApp.controller("LocationsController", ['$scope', '$http',
 
         $scope.add = function () {
             if ($scope.newLocation) {
-                var url = "http://localhost:1234/api/airdata/zipcode/" + $scope.newLocation
+                var url = "/api/airdata/zipcode/" + $scope.newLocation
                 $http.get(url)
                     .success(function(data){
                         var name = data[0].ReportingArea + ", " + data[0].StateCode
