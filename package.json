@@ -1,0 +1,24 @@
+{
+  "name": "CS360MVP",
+  "version": "1.0.0",
+  "description": "AQ Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikehermes/CS360MVP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikehermes/CS360MVP/issues"
+  },
+  "homepage": "https://github.com/mikehermes/CS360MVP",
+  "dependencies": {
+    "cookie-parser": "^1.3.3",
+    "express": "^4.10.4",
+    "passport": "^0.2.1"
+  }
+}
