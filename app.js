@@ -19,6 +19,14 @@ app.get("/zipcode/:zipcode", function (req, res) {
     
 });
 
+app.get("/getAirQualityDataForCurrentLocation", function(req, res){
+    //where the user is located
+    
+    //get air quality data for that location
+    
+    //send json
+})
+
 app.get("/*", function (req, res) {
     res.sendFile(__dirname + "/public/index.html")
 });
