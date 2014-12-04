@@ -8,7 +8,7 @@ var app = express();
 app.use(cookieParser());
 
 app.get('/',function(req,res){
-	console.log("Cookies: ",req.cookies);
+	console.log("Cookies: ",req.cookies);/*something*/
 });
 function isAuthenticated(req,res,next){
 	if(req.query.password !== "1234")
