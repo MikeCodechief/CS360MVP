@@ -7,7 +7,7 @@ airQualityApp.controller("LocationsController", ['$scope', '$http',
 
         $scope.add = function () {
             if ($scope.newLocation) {
-                var url = "http://localhost:1234/zipcode/" + $scope.newLocation
+                var url = "http://localhost:1234/api/zipcode/" + $scope.newLocation
                 console.log(url)
                 console.log('/zipcode/' + $scope.newLocation)
                 $http.get(url)
