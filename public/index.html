@@ -3,6 +3,17 @@
 
 <head>
     <title>Air Quality Checker</title>
+    
+    <!-- Scriptsss -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+    <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/controllers/currentLocationController.js"></script>
+    <script type="text/javascript" src="js/controllers/locationsController.js"></script>
+    <script type="text/javascript" src="js/config/router.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/css/layout.css">
     <base href="/">
@@ -28,7 +39,7 @@
                     </li>
                     <li><a href="/locations">Sign-up</a>
                     </li>
-                    <ul>
+                </ul>
             </div>
         </div>
     </nav>
@@ -37,15 +48,11 @@
     <br>
     <br>
     <br>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+    
 
-    <div ng-view></div>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="js/core.js"></script>
-    <script type="text/javascript" src="js/controllers/currentLocationController.js"></script>
-    <script type="text/javascript" src="js/controllers/locationsController.js"></script>
-    <script type="text/javascript" src="js/config/router.js"></script>
 </body>
 
 </html>

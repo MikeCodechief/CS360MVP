@@ -13,7 +13,6 @@ app.get("/zipcode/:zipcode", function (req, res) {
         url: airNowUrl,
         json: true
     }, function(e, r, data){
-        console.log(data)
         return res.json(data)
         
     })

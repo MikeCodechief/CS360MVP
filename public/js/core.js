@@ -1,1 +1,1 @@
-var airQualityApp = angular.module('airQualityApp',[])
+var airQualityApp = angular.module('airQualityApp',['ui.bootstrap'])
