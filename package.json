@@ -1,0 +1,24 @@
+{
+  "name": "CS360MVP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.4",
+    "request": "^2.49.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikehermes/CS360MVP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikehermes/CS360MVP/issues"
+  },
+  "homepage": "https://github.com/mikehermes/CS360MVP"
+}
