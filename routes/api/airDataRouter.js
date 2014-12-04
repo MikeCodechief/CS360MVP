@@ -16,7 +16,7 @@ router.get("/zipcode/:zipcode", function (req, res) {
 })
 
 
-router.get('/getAirQualityAtCurrentLocation', function(req, res){
+router.get('/currentLocation', function(req, res){
     res.send('not implemented')
 })
 

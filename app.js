@@ -11,8 +11,10 @@ app.use(express.static(__dirname + '/public'))
 app.use(logger('dev'));
 
 //attach routers to app
-app.use('/api/', require('./routes/api'))
-app.use('/', require('./routes/index'))
+var apiRouters = require('./routes/apiRouters')
+app.use('/api/airdata/', apiRouters.airData )
+app.use('/api/user/', apiRouters.user )
+app.use('/', require('./routes/indexRouter'))
 
 var port = process.env.PORT || 1234
 app.listen(port, function(){
