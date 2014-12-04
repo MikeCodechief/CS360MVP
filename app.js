@@ -1,26 +1,22 @@
 var express = require('express')
 var request = require('request')
+var logger = require('morgan');
 
 var app = express()
 
-app.use(express.static(__dirname + '/public'));
+//serve static html files
+app.use(express.static(__dirname + '/public'))
 
-app.get("/zipcode/:zipcode", function (req, res) {
-    var airNowUrl = 'http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=' 
-        +  req.params.zipcode 
-        + '&distance=25&API_KEY=78BA13EA-D252-489D-8C24-01045380F529&callback=JSON_CALLBACK'
-    request.get({
-        url: airNowUrl,
-        json: true
-    }, function(e, r, data){
-        return res.json(data)
-        
-    })
-    
-});
+//log requests
+app.use(logger('dev'));
 
-app.get("/*", function (req, res) {
-    res.sendFile(__dirname + "/public/index.html")
-});
+//attach routers to app
+var apiRouters = require('./routes/apiRouters')
+app.use('/api/airdata/', apiRouters.airData )
+app.use('/api/user/', apiRouters.user )
+app.use('/', require('./routes/indexRouter'))
 
-app.listen(1234)
+var port = process.env.PORT || 1234
+app.listen(port, function(){
+    console.log("listening to " + port)
+})
