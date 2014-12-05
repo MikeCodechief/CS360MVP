@@ -5,6 +5,5 @@ airQualityApp.controller("CurrentLocationController", ['$scope', '$http',
             .success(function (data) {
                 $scope.name = data[0].ReportingArea + ", " + data[0].StateCode
                 $scope.quality = data[0].Category.Name
-                console.log($scope.name, $scope.quality)
             })
 }])
