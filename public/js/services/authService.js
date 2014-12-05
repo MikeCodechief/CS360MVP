@@ -13,4 +13,4 @@ airQualityApp.factory("Auth", function($http){
       }
     }
   })
-})
+

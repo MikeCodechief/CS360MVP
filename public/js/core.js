@@ -1,1 +1,1 @@
-var airQualityApp = angular.module('airQualityApp',['ui.bootstrap'])
+var airQualityApp = angular.module('airQualityApp',['ui.bootstrap', 'ngRoute'])
