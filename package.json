@@ -5,7 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.10.4",
+    "express-session": "^1.9.3",
     "morgan": "^1.5.0",
+    "passport-facebook": "^1.0.3",
     "request": "^2.49.0"
   },
   "devDependencies": {},
