@@ -4,6 +4,8 @@ var logger = require('morgan');
 
 var app = express()
 
+//configure db
+require('./config/database')
 
 //serve static html files
 app.use(express.static(__dirname + '/public'))
