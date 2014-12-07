@@ -42,7 +42,8 @@
                     </li>
                 </ul>
                 <ul ng-show='user' class="nav navbar-nav navbar-right">
-                    <li><a>Logged in as {{user.email}}</a>
+                    <li><img src='{{user.pictureUrl}}'></img></li>
+                    <li><a href='/locations'>Logged in as {{user.firstName}}</a>
                     </li>
                     <li><a ng-click="logout()">Sign out</a>
                     </li>

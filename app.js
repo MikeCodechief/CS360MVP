@@ -1,11 +1,20 @@
 var express = require('express')
 var request = require('request')
-var logger = require('morgan');
+var logger = require('morgan')
+var passport = require('passport')
+var session = require('express-session')
 
 var app = express()
 
 //configure db
 require('./config/database')
+//configure passport
+require('./config/facebook')
+
+app.use(session({ secret: 'Albus Dumbledore' }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 //serve static html files
 app.use(express.static(__dirname + '/public'))
@@ -21,6 +30,7 @@ var indexRouter = require('./routes/indexRouter')
 
 app.use('/api/airdata/', apiRouters.airData )
 app.use('/api/user/', apiRouters.user )
+app.use('/auth/', require('./routes/authRouter'))
 app.use('/', indexRouter)
 
 

@@ -1,5 +1,10 @@
-airQualityApp.controller('navBarController', function ($scope, $modal, $location, Auth) {
-    
+airQualityApp.controller('navBarController', function ($scope, $modal, $location, $http) {
+    $http.get('/auth/user').success(function(data){
+        console.log(data)
+        if(data.facebook){
+            $scope.user = data.facebook   
+        }
+    })
     $scope.openLoginModal = function () {
         var modalInstance = $modal.open({
             templateUrl: "views/module_views/login.html",
@@ -21,7 +26,11 @@ airQualityApp.controller('navBarController', function ($scope, $modal, $location
 
     $scope.logout = function() {
         $scope.user = null
-        $location.path('/')
+        $http.get('/auth/logout').success(function(data){
+            $scope.user = null  
+            $location.path('/')
+        })
+        
         
     }
 })
