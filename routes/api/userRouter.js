@@ -1,18 +1,21 @@
 var express = require('express')
-var path = require('path')
+var ensureAuthenticated = require('./../../services/ensureAuthenticated')
 
 var router = express.Router()
 
-//auth stuff goes here..
+router.use(ensureAuthenticated)
+
 router.get('/', function(req, res){
-    res.send('user data')
+    res.json(req.user)
 })
 
 router.get('/locations', function(req,res){
     res.send('user locations')
 })
 
-
+router.post('/locations', function(req,res){
+  res.send('location added')  
+})
 
 
 

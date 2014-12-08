@@ -2,7 +2,7 @@ function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         next()
     }
-    res.send('not logged in')
+    res.json({loggedIn: false})
 }
 
 module.exports = ensureAuthenticated

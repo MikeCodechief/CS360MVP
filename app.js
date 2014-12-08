@@ -10,8 +10,7 @@ var app = express()
 require('./config/database')
 //configure passport
 require('./config/facebook')
-
-app.use(session({ secret: 'Albus Dumbledore' }));
+app.use(session({ secret: 'Albus Dumbledore', saveUninitialized: true, resave: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
