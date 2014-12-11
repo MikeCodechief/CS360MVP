@@ -8,8 +8,6 @@ airQualityApp.controller("CurrentLocationController", ['$scope', '$http',
         var success = function(position){
         	lat = position.coords.latitude//user's latitude
         	lnt = position.coords.longitude //user's longitude
-	        console.log(lat)
-	        console.log(lnt)
 	        var url = "/api/airdata/coordinates?long=" + lnt + "&lat=" + lat;
 	        $http.get(url)
 	            .success(function (data) {

@@ -1,6 +1,5 @@
 airQualityApp.controller('navBarController', function ($scope, $modal, $location, $http) {
     $http.get('/auth/user').success(function(data){
-        console.log(data)
         if(data.facebook){
             $scope.user = data.facebook   
         }
