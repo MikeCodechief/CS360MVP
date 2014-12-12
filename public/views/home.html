@@ -6,6 +6,7 @@
         <h5 ng-show="loading">Loading air data for your current location...</h5>
         <h1 ng-show="!loading">{{name}}</h1>
         <h4 ng-show="!loading">air quality:  <span class="air-quality {{quality}}">{{quality}}</span></h4>
+        <p ng-show="!loading">{{description}}</p>
       </div>
     </div>
   </section>
