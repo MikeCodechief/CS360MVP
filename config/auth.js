@@ -6,7 +6,7 @@ module.exports = {
     'facebook' : {
         'clientID'      : '2498990773', // your App ID
         'clientSecret'  : 'ceee3f3fb7bd5abb3fddca8ed71d441f', // your App Secret
-        'callbackURL'   : 'https://frozen-anchorage-4634.herokuapp.com'
+        'callbackURL'   : 'http://frozen-anchorage-4634.herokuapp.com'
     },
 
     'twitter' : {
