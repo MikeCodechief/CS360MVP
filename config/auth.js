@@ -4,9 +4,9 @@
 module.exports = {
 
     'facebook' : {
-        'clientID'      : '2498990773', // your App ID
-        'clientSecret'  : '8d4c87f6227438c61acb413f8af33a5c', // your App Secret
-        'callbackURL'   : 'www.google.com'
+        'clientID'      : '573069066172383', // your App ID
+        'clientSecret'  : 'e9f9cff833f7215409ddc678ac4770c4', // your App Secret
+        'callbackURL'   : 'http://www.yunvironment.com/locations/'
     },
 
     'twitter' : {
