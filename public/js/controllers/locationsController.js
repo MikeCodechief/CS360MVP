@@ -15,6 +15,7 @@ airQualityApp.controller("LocationsController", ['$scope', '$http',
                         var tmp = {}
                         tmp.name = data[0].ReportingArea + ", " + data[0].StateCode
                         tmp.quality = data[0].Category.Name
+                        tmp.description = getDescriptionForAirQuality(tmp.quality)
                         tmp.longitude = data[0].Longitude
                         tmp.latitude = data[0].Latitude
                         $scope.locations.push(tmp)
@@ -42,9 +43,11 @@ airQualityApp.controller("LocationsController", ['$scope', '$http',
                             name: name,
                             quality: quality,
                             longitude: long,
-                            latitude: lat
+                            latitude: lat,
+                            description: getDescriptionForAirQuality(quality)
                         }
                         $scope.locations.push(tmp)
+                        
                     })
             }
             $scope.newLocation = "";
@@ -60,6 +63,28 @@ airQualityApp.controller("LocationsController", ['$scope', '$http',
                 $scope.locations.splice(i, 1)
             })
         }
+function getDescriptionForAirQuality(quality){
+    var description = "";
+    if (quality === "Good"){
+                        description = "The current air quality is considered satisfactory, and air pollution poses little or no risk."
+                    }
+                    else if ($scope.quality === "Moderate"){
+                        description = "The current air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
+                    }
+                    else if ($scope.quality === "Unhealthy for Sensitive Groups") {
+                        description = "In the current air quality members of sensitive groups may experience health effects. The general public is not likely to be affected."
+                    }
+                    else if ($scope.quality === "Unhealthy") {
+                        description = "In the current air quality everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."
+                    }
+                    else if ($scope.quality === "Very Unhealthy") {
+                        description = "In the current air quality health warnings of emergency conditions. The entire population is more likely to be affected."
+                    }
+                    else {//($scope.quality === "Hazardous") {
+                        description = "Health alert: everyone may experience more serious health effects."
+                    }
 
+                    return description;
+}
 
 }])
