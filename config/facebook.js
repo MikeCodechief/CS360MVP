@@ -32,6 +32,7 @@ passport.use(new FacebookStrategy({
     },
     function (accessToken, refreshToken, profile, done) {
         // asynchronous verification, for effect...
+        console.log(profile)
         process.nextTick(function () {
 
             User.findOne({

@@ -6,7 +6,7 @@ module.exports = {
     'facebook' : {
         'clientID'      : '573069066172383', // your App ID
         'clientSecret'  : 'e9f9cff833f7215409ddc678ac4770c4', // your App Secret
-        'callbackURL'   : 'http://www.yunvironment.com/locations/'
+        'callbackURL'   : 'http://www.yunvironment.com/auth/facebook/callback'
     },
 
     'twitter' : {
