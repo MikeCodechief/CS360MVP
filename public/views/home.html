@@ -4,7 +4,7 @@
       <div class="air-quality-box col-xs-12 row" ng-controller="CurrentLocationController">
         <h2 ng-show="loading">Loading air data for your current location...</h2>
         <h1 ng-show="!loading">{{name}}</h1>
-        <h4 ng-show="!loading">air quality:  {{quality}}</h4>
+        <h4 ng-show="!loading">air quality:  <span class="air-quality {{quality}}">{{quality}}</span></h4>
       </div>
     </div>
   </section>

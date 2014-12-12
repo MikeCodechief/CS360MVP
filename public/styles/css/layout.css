@@ -15,3 +15,38 @@ nav.navbar .navbar-brand img {
 .navbar a:hover {
     cursor: pointer;
 }
+
+.air-quality {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.Good {
+   background-color: #00e400; 
+}
+
+.Moderate {
+    background-color: #ffff00;
+}
+
+.Sensitive {
+    background-color: #ff7e00;
+    color: white;
+}
+
+.Unhealthy {
+    background-color: #ff0000;
+    color: white;
+}
+
+.Very {
+    background-color: #99004c;
+    color: white;
+}
+
+.Hazardous {
+    background-color: #7e0023;
+    color: white;
+}
+
