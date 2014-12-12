@@ -13,8 +13,10 @@
 
                 <button class="btn btn-danger col-xs-1 col-xs-offset-8" ng-click="remove($index)">X</button>
             </div>
-            <h4 class="col-xs-12">air quality:  <span class="air-quality {{location.quality}}">{{location.quality}}</span></h4>
-            <p class="col-xs-12">{{location.description}}</p>
+            <div class="row">
+                <h4 class="col-xs-12">air quality:  <span class="air-quality {{location.quality}}">{{location.quality}}</span></h4>
+                <p class="col-xs-12">{{location.description}}</p>
+            </div>
         </div>
     </div>
 </section>
