@@ -35,7 +35,7 @@ router.get('/add/coordinates', function (req, res) {
             newLocation.save(function(err, loc){
             if (err) { return res.json(err) }
                 data[0]._id = loc._id
-                return res.json(loc, data)
+                return res.json(data)
             })
         } else {
             return res.json(data)
@@ -60,7 +60,7 @@ router.get("/add/zipcode/:zipcode", function (req, res) {
             newLocation.save(function(err, loc){
             if (err) { return res.json(err) }
                 data[0]._id = loc._id
-                return res.json(loc, data)
+                return res.json(data)
             })
         } else {
             return res.json(data)  
