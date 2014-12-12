@@ -5,11 +5,9 @@
       	<img ng-show="loading" src="/imgs/loading.GIF" height="50" width="50">
         <h5 ng-show="loading">Loading air data for your current location...</h5>
           
-        <h1 ng-show="!loading" class="col-xs-6">{{name}}</h1>
-        <h4 ng-show="!loading" class="col-xs-6">air quality:  <span class="air-quality {{quality}}">{{quality}}</span></h4>
-        <br>
-        <br>
-        <p ng-show="!loading" class="col-xs-12">{{description}}</p>
+        <h1 ng-show="!loading">{{name}}</h1>
+        <h4 ng-show="!loading">air quality:  <span class="air-quality {{quality}}">{{quality}}</span></h4>
+        <p ng-show="!loading">{{description}}</p>
       </div>
     </div>
   </section>
