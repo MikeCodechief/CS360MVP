@@ -50,3 +50,11 @@ nav.navbar .navbar-brand img {
     color: white;
 }
 
+.air-quality-box img {
+	display:block;
+	margin: 10px auto;
+}
+.air-quality-box h5 {
+	text-align: center;
+}
+
